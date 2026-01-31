@@ -14,10 +14,10 @@ variable "name" {
 }
 
 variable "subnets" {
-  type = map
+  type = map(string)
   description = "List of subnets in the VPC"
-  default = tomap({
+  default = {
     int_a = "10.0.0.0/24"
     int_b = "10.0.1.0/24"
-  })
+  }
 }
